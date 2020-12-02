@@ -1,0 +1,74 @@
+@import "fonts";
+@import "normalize";
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select-region {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  &__label {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__input {
+    margin-left: 10px;
+  }
+}
+
+.region {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__country {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+    padding: 10px;
+    border-radius: 6px;
+    justify-content: space-between;
+  }
+
+  &__country-name {
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0 auto 15px auto;
+  }
+
+  &__country-flag {
+    max-width: 90%;
+    border: 0.5px solid black;
+    margin: 0 auto 25px auto;
+  }
+
+  &__cat {
+    display: flex;
+    flex-direction: column;
+    max-width: 48%;
+  }
+
+  &__cat-name {
+    margin: 0 auto;
+  }
+
+  &__cat-image {
+    width: 100%;
+  }
+}

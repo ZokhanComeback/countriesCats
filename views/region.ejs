@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Region</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div class="select-region">
+    <% for (var i = 0; i < regions.length; i++) {%>
+        <label class="select-region__label">
+            <span class="select-region__text"><%- regions[i]%></span>
+            <input
+                id="regionRadio"
+                type="radio"
+                class="select-region__input"
+                name="region"
+                value="<%- regions[i]%>"
+                <%= regions[i] === region ? 'checked' : ''%>
+            />
+        </label>
+    <% } %>
+</div>
+<section class="region">
+    <% for (var j = 0; j < countries.length; j++) {%>
+        <article class="region__country">
+            <h2 class="region__country-name"><%- countries[j].countryName %></h2>
+            <img alt="flag" src="<%- countries[j].countryFlag %>" class="region__country-flag" />
+
+            <% for (var cat = 0; cat < countries[j].breeds.length; cat++) {%>
+                <article class="region__cat">
+                    <h2 class="region__cat-name"><%- countries[j].breeds[cat].name %></h2>
+                    <img alt="cat" src="<%- countries[j].breeds[cat].image %>" class="region__cat-image" />
+                </article>
+            <% } %>
+        </article>
+    <% } %>
+</section>
+<script src="/javascripts/radio.js"></script>
+</body>
+</html>

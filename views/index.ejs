@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>App</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<div class="select-region">
+  <% for (var i = 0; i < regions.length; i++) {%>
+    <label class="select-region__label">
+      <span class="select-region__text"><%- regions[i]%></span>
+      <input id="regionRadio" type="radio" class="select-region__input" name="region" value="<%- regions[i]%>"/>
+    </label>
+  <% } %>
+</div>
+<script src="/javascripts/radio.js"></script>
+</body>
+</html>
